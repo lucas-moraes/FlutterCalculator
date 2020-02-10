@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hello_word/models/memory.dart';
+import 'package:FlutterCalculator/models/memory.dart';
 import '../components/display.dart';
 import '../components/keyboard.dart';
 
