@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Display extends StatelessWidget {
   final String text;
@@ -13,9 +14,23 @@ class Display extends StatelessWidget {
         color: Color.fromRGBO(48, 48, 48, 1),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch, 
-          //Parei no minuto 7:34 https://www.youtube.com/watch?v=jyjdXFsQoYw&t=703s
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            Text(text),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: AutoSizeText(
+                text,
+                minFontSize: 20,
+                maxFontSize: 80,
+                maxLines: 1,
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                  fontWeight: FontWeight.w100,
+                  decoration: TextDecoration.none,
+                  fontSize: 80,
+                  color: Colors.white,
+                ),),
+            ),
           ],
         ),
       )
